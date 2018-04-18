@@ -10,7 +10,7 @@
     "clean": "rm -f ./dist/*.js",
     "lint": "eslint lib/ test/ || exit 0",
     "prepublish": "make babel && make styles",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec test/*.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
+    "bstring": "0.0.2",
     "prop-types": "^15.6.1",
     "react": "^16.3.1"
   },
@@ -47,6 +48,8 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.4.0",
+    "mocha": "^5.1.0",
+    "bcoin": "bcoin-org/bcoin",
     "prettier": "^1.11.1"
   },
   "peerDependencies": {
