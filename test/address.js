@@ -13,7 +13,7 @@ const addresses = generateAddresses();
 
 describe('Address', function() {
   describe('Base58', function() {
-    it('should identify network in partial P2PKH (3)', () => {
+    it('should identify network and type from partial P2PKH (3)', () => {
       for (const network of networkNames) {
         const address = addresses[network].P2PKH;
         const info = AddressInfo.fromString(address.substr(0, 3));
@@ -21,6 +21,47 @@ describe('Address', function() {
         assert.strictEqual(info.type, 'P2PKH');
         assert.strictEqual(info.network, network);
         assert.strictEqual(info.encoding, 'base58');
+        assert.strictEqual(info.final, false);
+        assert.strictEqual(info.version, -1);
+      }
+    });
+
+    it('should identify network and type from P2PKH', () => {
+      for (const network of networkNames) {
+        const address = addresses[network].P2PKH;
+        const info = AddressInfo.fromString(address);
+
+        assert.strictEqual(info.type, 'P2PKH');
+        assert.strictEqual(info.network, network);
+        assert.strictEqual(info.encoding, 'base58');
+        assert.strictEqual(info.final, true);
+        assert.strictEqual(info.version, -1);
+      }
+    });
+
+    it('should identify network and type from partial P2SH (3)', () => {
+      for (const network of networkNames) {
+        const address = addresses[network].P2SH;
+        const info = AddressInfo.fromString(address.substr(0, 3));
+
+        assert.strictEqual(info.type, 'P2SH');
+        assert.strictEqual(info.network, network);
+        assert.strictEqual(info.encoding, 'base58');
+        assert.strictEqual(info.final, false);
+        assert.strictEqual(info.version, -1);
+      }
+    });
+
+    it('should identify network and type from P2SH', () => {
+      for (const network of networkNames) {
+        const address = addresses[network].P2SH;
+        const info = AddressInfo.fromString(address);
+
+        assert.strictEqual(info.type, 'P2SH');
+        assert.strictEqual(info.network, network);
+        assert.strictEqual(info.encoding, 'base58');
+        assert.strictEqual(info.final, true);
+        assert.strictEqual(info.version, -1);
       }
     });
   });
