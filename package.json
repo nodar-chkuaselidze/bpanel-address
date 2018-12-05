@@ -30,31 +30,32 @@
   },
   "homepage": "https://github.com/nodar-chkuaselidze/bpanel-address#readme",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "bstring": "0.0.2",
-    "prop-types": "^15.6.1",
-    "react": "^16.3.1"
+    "babel-cli": "6.26.0",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "bstring": "0.3.4",
+    "bstring-errors": "0.0.2",
+    "prop-types": "15.6.2",
+    "react": "16.6.1"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.2",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.6.0",
-    "eslint-import-resolver-webpack": "^0.8.3",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-prettier": "^2.3.1",
-    "eslint-plugin-react": "^7.4.0",
-    "mocha": "^5.1.0",
+    "babel-eslint": "10.0.1",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-3": "6.24.1",
+    "eslint": "5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-import-resolver-webpack": "^0.10.1",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-prettier": "3.0.0",
+    "eslint-plugin-react": "7.11.1",
+    "mocha": "5.1.0",
     "bcoin": "bcoin-org/bcoin",
-    "prettier": "^1.11.1"
+    "prettier": "1.15.3"
   },
   "peerDependencies": {
     "bcoin": "bcoin-org/bcoin",
-    "react": "^16.2.0",
-    "prop-types": "^15.6.1"
+    "react": "16.6.1",
+    "prop-types": "15.6.2"
   }
 }
