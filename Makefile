@@ -1,9 +1,6 @@
 all:
 	@npm run babel
 
-styles:
-	@npm run styles
-
 babel:
 	@npm run babel
 
